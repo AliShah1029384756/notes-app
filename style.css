@@ -1,0 +1,190 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #121212;
+  color: #e0e0e0;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.app {
+  display: flex;
+  height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 260px;
+  background: #1e1e1e;
+  border-right: 1px solid #2e2e2e;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 16px 12px;
+}
+
+.sidebar-header h2 {
+  font-size: 1.3rem;
+  color: #fff;
+}
+
+.sidebar-header button {
+  width: 30px;
+  height: 30px;
+  background: #f5a623;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  font-size: 1.4rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.sidebar-header button:hover { background: #e09415; }
+
+#searchInput {
+  margin: 0 12px 12px;
+  padding: 8px 12px;
+  background: #2a2a2a;
+  border: 1px solid #3a3a3a;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 0.85rem;
+  outline: none;
+}
+
+#searchInput::placeholder { color: #666; }
+#searchInput:focus { border-color: #f5a623; }
+
+#noteList {
+  list-style: none;
+  overflow-y: auto;
+  flex: 1;
+  padding: 0 8px;
+  scrollbar-width: thin;
+  scrollbar-color: #333 transparent;
+}
+
+.note-item {
+  padding: 12px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 4px;
+  transition: background 0.15s;
+  border-left: 3px solid transparent;
+}
+
+.note-item:hover { background: #2a2a2a; }
+.note-item.active { background: #2a2a2a; border-left-color: #f5a623; }
+
+.note-item .note-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #e0e0e0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.note-item .note-preview {
+  font-size: 0.78rem;
+  color: #888;
+  margin-top: 3px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.note-item .note-date {
+  font-size: 0.72rem;
+  color: #555;
+  margin-top: 2px;
+}
+
+/* Editor */
+.editor-area {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: #181818;
+}
+
+#placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  color: #444;
+  font-size: 1rem;
+}
+
+#editor {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+#editor.hidden { display: none; }
+
+.editor-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 20px;
+  border-bottom: 1px solid #2e2e2e;
+}
+
+#noteTitle {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 600;
+  outline: none;
+}
+
+#noteTitle::placeholder { color: #3a3a3a; }
+
+#deleteNoteBtn {
+  padding: 6px 14px;
+  background: transparent;
+  border: 1px solid #c0392b;
+  color: #c0392b;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: all 0.2s;
+}
+
+#deleteNoteBtn:hover { background: #c0392b; color: #fff; }
+
+#noteBody {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: #d0d0d0;
+  font-size: 1rem;
+  line-height: 1.7;
+  padding: 20px;
+  resize: none;
+  outline: none;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.editor-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 20px;
+  border-top: 1px solid #2a2a2a;
+  font-size: 0.75rem;
+  color: #555;
+}
