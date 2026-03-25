@@ -1,12 +1,10 @@
 # Notes App
 
-## Overview
-A local note-taking application designed to practice CRUD operations and local storage persistence.
+![Project](https://img.shields.io/badge/Project-Frontend-0ea5e9)
+![Persistence](https://img.shields.io/badge/Persistence-localStorage-16a34a)
 
-## Learning Outcomes
-- Implement create, read, update, delete flows
-- Persist user data with `localStorage`
-- Build fast search and sorted list behavior
+## Overview
+Local note-taking application designed to practice CRUD operations and storage persistence.
 
 ## Tech Stack
 - HTML
@@ -16,6 +14,11 @@ A local note-taking application designed to practice CRUD operations and local s
 
 ## Run Locally
 1. Open `index.html` in a browser.
+
+## Learning Outcomes
+- Implement create, read, update, delete flows
+- Persist user data with `localStorage`
+- Build search and sorted list behavior
 
 ## Common Mistakes
 - Forgetting to sync edited content before switching notes
