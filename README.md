@@ -3,6 +3,9 @@
 ![Project](https://img.shields.io/badge/Project-Frontend-0ea5e9)
 ![Persistence](https://img.shields.io/badge/Persistence-localStorage-16a34a)
 
+## 🎨 Live Demo
+Open [`index.html`](index.html) in your browser to create and organize notes.
+
 ## Overview
 Local note-taking application designed to practice CRUD operations and storage persistence.
 
